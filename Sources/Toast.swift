@@ -78,6 +78,7 @@ open class Toast: Operation {
   // MARK: Showing
 
   public func show() {
+    print("SHOWING  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!");
     ToastCenter.default.add(self)
   }
 
