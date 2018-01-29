@@ -143,6 +143,11 @@ open class Toast: Operation {
       )
     }
   }
+  
+  public func test(from data : Data) { 
+        let bytes = [UInt8](data)
+        return String.init(format: "%02x:%02x:%02x:%02x:%02x:%02x", bytes[5], bytes[4], bytes[3], bytes[2], bytes[1], bytes[0]);
+  }
 
   func finish() {
     self.isExecuting = false
