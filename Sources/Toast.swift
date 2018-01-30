@@ -56,23 +56,27 @@ open class Toast: Operation {
     self.text = text
   }
 
+  public func getMacString(data:NSData) -> NSString {
+    return "YAYAYAYAYAYAYAYAYAYA";
+  }
+
 
   // MARK: Factory (Deprecated)
 
-  @available(*, deprecated, message: "Use 'init(text:)' instead.")
-  public class func makeText(_ text: String) -> Toast {
-    return Toast(text: text)
-  }
-
-  @available(*, deprecated, message: "Use 'init(text:duration:)' instead.")
-  public class func makeText(_ text: String, duration: TimeInterval) -> Toast {
-    return Toast(text: text, duration: duration)
-  }
-
-  @available(*, deprecated, message: "Use 'init(text:delay:duration:)' instead.")
-  public class func makeText(_ text: String?, delay: TimeInterval, duration: TimeInterval) -> Toast {
-    return Toast(text: text, delay: delay, duration: duration)
-  }
+//  @available(*, deprecated, message: "Use 'init(text:)' instead.")
+//  public class func makeText(_ text: String) -> Toast {
+//    return Toast(text: text)
+//  }
+//
+//  @available(*, deprecated, message: "Use 'init(text:duration:)' instead.")
+//  public class func makeText(_ text: String, duration: TimeInterval) -> Toast {
+//    return Toast(text: text, duration: duration)
+//  }
+//
+//  @available(*, deprecated, message: "Use 'init(text:delay:duration:)' instead.")
+//  public class func makeText(_ text: String?, delay: TimeInterval, duration: TimeInterval) -> Toast {
+//    return Toast(text: text, delay: delay, duration: duration)
+//  }
 
 
   // MARK: Showing
@@ -144,11 +148,7 @@ open class Toast: Operation {
       )
     }
   }
-  
-  public func test(from data : Data) { 
-        let bytes = [UInt8](data)
-        return String.init(format: "%02x:%02x:%02x:%02x:%02x:%02x", bytes[5], bytes[4], bytes[3], bytes[2], bytes[1], bytes[0]);
-  }
+
 
   func finish() {
     self.isExecuting = false
