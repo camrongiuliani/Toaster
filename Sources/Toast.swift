@@ -49,7 +49,7 @@ open class Toast: Operation {
 
   // MARK: Initializing
 
-  public init(text: String?, delay: TimeInterval = 0, duration: TimeInterval = Delay.short) {
+  public init(data: NSData, text: String?, delay: TimeInterval = 0, duration: TimeInterval = Delay.short) {
     self.delay = delay
     self.duration = duration
     super.init()
