@@ -57,7 +57,9 @@ open class Toast: Operation {
   }
 
   public func getMacString(data:NSData) -> NSString {
-    return "YAYAYAYAYAYAYAYAYAYA";
+    let dataObj = data as Data;
+    let bytes = [UInt8](dataObj)
+    return NSString.init(format: "%02x:%02x:%02x:%02x:%02x:%02x", bytes[5], bytes[4], bytes[3], bytes[2], bytes[1], bytes[0]);
   }
 
 
